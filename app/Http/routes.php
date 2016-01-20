@@ -12,3 +12,5 @@
 */
 
 Route::controller('/', 'Site\SiteController');
+
+Route::controller('full-article/{id}', 'Site\SiteController');

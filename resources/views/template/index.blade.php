@@ -12,10 +12,10 @@
     <title>@yield('title')</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="assets/css/1-col-portfolio.css" rel="stylesheet">
+    <link href="{{ url('assets/css/1-col-portfolio.css') }}" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,11 +39,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Blog - Laravel 5</a>
+            <a class="navbar-brand" href="/">Blog - Laravel 5</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
+                <li>
+                    <a href="/">Página Inicial</a>
+                </li>
                 <li>
                     <a href="#">Sobre</a>
                 </li>
@@ -81,10 +84,10 @@
 <!-- /.container -->
 
 <!-- jQuery -->
-<script src="assets/js/jquery.js"></script>
+<script src="{{ url('assets/js/jquery.js') }}"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="{{ url('assets/js/bootstrap.min.js') }}"></script>
 
 </body>
 

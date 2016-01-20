@@ -25,7 +25,7 @@
                 <h3>{{ $post['title'] }}</h3>
                 <h4>{{ $post['subtitle'] }}</h4>
                 <p>{{ $post['description'] }}</p>
-                <a class="btn btn-primary" href="#">Ver post <span class="glyphicon glyphicon-chevron-right"></span></a>
+                <a class="btn btn-primary" href="{{ $post['link'] }}">Ver post <span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
         </div>
         <hr>
