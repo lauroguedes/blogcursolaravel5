@@ -11,6 +11,8 @@
 |
 */
 
-Route::controller('/', 'Site\SiteController');
+Route::controller('blog', 'Site\PostsController');
 
 Route::controller('full-article/{id}', 'Site\SiteController');
+
+Route::controller('/', 'Site\SiteController');
