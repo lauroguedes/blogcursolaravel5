@@ -11,8 +11,8 @@
 |
 */
 
-Route::controller('blog', 'Site\PostsController');
+Route::get('admin/posts', ['as' => 'admin.posts.index', 'uses' => 'PostsAdminController@index']);
+Route::get('admin/posts/create', ['as' => 'admin.posts.create', 'uses' => 'PostsAdminController@create']);
+Route::post('admin/posts/store', ['as' => 'admin.posts.store', 'uses' => 'PostsAdminController@store']);
 
-Route::controller('full-article/{id}', 'Site\SiteController');
-
-Route::controller('/', 'Site\SiteController');
+Route::get('/', 'Site\PostsController@index');

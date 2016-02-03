@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 
 class PostsController extends Controller
 {
-    public function getIndex(){
+    public function index(){
         $posts = \App\Post::all();
         return view('posts.index', compact('posts'));
     }

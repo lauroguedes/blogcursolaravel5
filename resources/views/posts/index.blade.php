@@ -17,6 +17,17 @@
                 <p>{{ $post->content }}</p>
                 <a class="btn btn-primary" href="#">Ver post <span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
+            <p>
+                @foreach($post->tags as $tag)
+                    <span> {{ $tag->name }} </span>
+                @endforeach
+            </p>
+            <h3>Coomments</h3>
+            @foreach($post->comments as $comment)
+                <strong>Name:</strong> {{ $comment->name }} <br>
+                <strong>Comment:</strong> {{ $comment->comment }}
+            @endforeach
+            <hr>
         </div>
         <hr>
     @endforeach
