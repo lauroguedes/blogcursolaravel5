@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <h4>Painel administrativo - Criar</h4>
+    <h4>Painel administrativo - Editar - {{ $post->title }}</h4>
 
     @if($errors->any())
         <ul>
@@ -15,12 +15,12 @@
         </ul>
     @endif
 
-    {!! Form::open(['route'=>'admin.posts.store', 'method'=>'post']) !!}
+    {!! Form::model($post, ['route'=>['admin.posts.update', $post->id], 'method'=>'put']) !!}
 
     @include('admin.posts._form')
 
     <div class="form-group">
-        {!! Form::submit('Create Post', ['class'=>'btn btn-primary']) !!}
+        {!! Form::submit('Edit Post', ['class'=>'btn btn-primary']) !!}
     </div>
 
     {!! Form::close() !!}

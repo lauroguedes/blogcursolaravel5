@@ -7,6 +7,8 @@
 @section('content')
     <h4>Painel administrativo</h4>
 
+    <a href="{{ route('admin.posts.create') }}" class="btn btn-success btn-lg">Create new Post</a>
+
     <table class="table">
         <tr>
             <th>ID</th>
@@ -18,8 +20,8 @@
                 <td>{{ $post->id }}</td>
                 <td>{{ $post->title }}</td>
                 <td>
-                    <a href="#" class="btn btn-success">Editar</a>
-                    <a href="#" class="btn btn-danger">Excluir</a>
+                    <a href="{{ route('admin.posts.edit', ['id' => $post->id]) }}" class="btn btn-success">Editar</a>
+                    <a href="{{ route('admin.posts.destroy', ['id' => $post->id]) }}" class="btn btn-danger">Excluir</a>
                 </td>
             </tr>
         @endforeach
