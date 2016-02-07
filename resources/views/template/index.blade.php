@@ -54,7 +54,7 @@
                     <a href="#">Serviços</a>
                 </li>
                 <li>
-                    <a href="#">Contato</a>
+                    <a href="auth/logout">Sair</a>
                 </li>
             </ul>
         </div>
